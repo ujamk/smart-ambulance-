@@ -56,6 +56,7 @@ Patient Monitor → Ambulance → MQTT Broker → Hospital → Database
 ---
 
 ## 🖥️ Example Output
+
 ### Patient Monitor (UI)
 SMART AMBULANCE MONITOR
 
@@ -65,9 +66,12 @@ Oxygen Level: 95 %
 Status: Stable
 Next update in 10 seconds
 
-### Hospital System
 
-PATIENT UPDATE RECEIVED
+---
+
+### Ambulance System (Message Sent)
+
+AMBULANCE A1 SENDING DATA...
 
 Patient ID: 2
 Condition: Broken Leg
@@ -77,6 +81,49 @@ Status: Stable
 ETA: 6 minutes
 Paramedic: John Smith
 Treatment: Leg stabilised
+
+
+---
+
+### Hospital System (Receiving Data)
+
+PATIENT UPDATE RECEIVED
+
+Patient ID: 2
+Ambulance: A1
+Condition: Broken Leg
+Heart Rate: 92
+Oxygen Level: 95
+Status: Stable
+ETA: 6 minutes
+Paramedic: John Smith
+Treatment: Leg stabilised
+
+
+---
+
+### Database Storage (Example Record)
+Patient_data Table
+
+patient_id: 2
+condition: Broken Leg
+heart_rate: 92
+oxygen: 95
+status: Stable
+eta: 6
+paramedic: John Smith
+treatment: Leg stabilised
+time: 10:00:10
+
+
+---
+
+### Continuous Updates Over Time
+
+10:00:00 → Heart Rate: 90
+10:00:10 → Heart Rate: 94
+10:00:20 → Heart Rate: 88
+10:00:30 → Heart Rate: 96
 
 
 ---
@@ -131,10 +178,10 @@ python src/ambulance.py
 
 ## 👥 Team Members and Roles
 
-- Student A → Patient Monitor (patient_monitor.py)
-- Student B → Ambulance System (ambulance.py)
-- Student C → Hospital System + Login
-- Student D → Database System
+- Mohamad Radwan → Patient Monitor (patient_monitor.py)
+- Chidera Akujieze → Ambulance System (ambulance.py)
+- Kosi Ujam → Hospital System + Login (hospital.py)
+- Mario Brunovsky → Database System (database.py)
 
 ---
 
