@@ -196,7 +196,7 @@ We will create:
 src/main.py
 ```
 
-This file will run the whole system.
+This file will run the whole system. Every file must have at least ONE main function so that the main.py can run it
 
 ---
 
