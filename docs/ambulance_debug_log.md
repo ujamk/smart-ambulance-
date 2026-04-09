@@ -1,5 +1,5 @@
 # ambulance_debug_log.md
-## Smart Ambulance System — Ambulance Component Debugging Journal
+## Smart Ambulance System, Ambulance Component Debugging Journal
 
 **Developer:** Chidera Akujieze  
 **File:** `ambulance.py`  
@@ -40,14 +40,14 @@ This document I created records the full iterative debugging process for my `amb
 
 ---
 
-# ITERATION 1 — Initial Broken Code
+# ITERATION 1, Initial Broken Code
 
-**Commit:** `a1f3c9` — "Initial ambulance system with multiple errors"  
+**Commit:** `a1f3c9`, "Initial ambulance system with multiple errors"  
 **Date:** 09 March 2026
 
 ---
 
-## Code (Version 1 — BROKEN)
+## Code (Version 1, BROKEN)
 
 ```python
 import paho.mqtt.client as mqtt
@@ -114,7 +114,7 @@ client.publish(TOPIC_PUBLISH, patient_data)
 
 ---
 
-## Team Conversation (Microsoft Teams — 09 March 2026)
+## Team Conversation (Microsoft Teams, 09 March 2026)
 
 > **Me** Hey everyone, I've written the first version of ambulance.py but it's throwing multiple errors and I can't run it at all. I'm getting SyntaxErrors immediately. I'll paste the code below — can anyone have a look?
 
@@ -133,14 +133,14 @@ client.publish(TOPIC_PUBLISH, patient_data)
 
 ---
 
-# ITERATION 2 — Partial Fix (Still Has Errors)
+# ITERATION 2, Partial Fix (Still Has Errors)
 
 **Commit:** `b2d7e1` — "Fixed syntax issues after team discussion"  
 **Date:** 13 March 2026
 
 ---
 
-## Code (Version 2 — PARTIALLY FIXED)
+## Code (Version 2, PARTIALLY FIXED)
 
 ```python
 import paho.mqtt.client as mqtt
@@ -223,7 +223,7 @@ time.sleep(1)
 
 ---
 
-# ITERATION 3 — Almost Correct (Minor Issues)
+# ITERATION 3, Almost Correct (Minor Issues)
 
 **Commit:** `c4e8a2` — "Resolved MQTT and JSON formatting problems"  
 **Date:** 17 March 2026
@@ -301,7 +301,7 @@ client.loop_stop()
 
 ---
 
-## Team Conversation (Teams — 17 March 2026)
+## Team Conversation (Teams, 17 March 2026)
 
 > **Me** Much better now, the hospital is receiving messages. But it only receives one message and then stops. I think I'm missing the loop. Also should the ETA be counting down?
 
@@ -318,14 +318,14 @@ client.loop_stop()
 
 ---
 
-# ITERATION 4 — Fully Working Code
+# ITERATION 4, Fully Working Code
 
 **Commit:** `e6g0c4`, "Final working ambulance system — all tests pass"  
 **Date:** 22 March 2026
 
 ---
 
-## Code (Version 4 — COMPLETE AND WORKING)
+## Code (Version 4, COMPLETE AND WORKING)
 
 ```python
 """
