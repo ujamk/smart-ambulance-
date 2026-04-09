@@ -12,7 +12,7 @@
 - Agreed on Smart Ambulance System idea and got approval
 - Assigned roles to all members
 
-## My Contribution
+## My Contribution (Chidera Akujieze)
 - Wrote the README.md file
 - Participated in system planning and role assignment
 - Helped define the MQTT communication structure
