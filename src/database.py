@@ -51,3 +51,30 @@ def save_data(data: dict):
     conn.commit()
     conn.close()
     print(f"[Database] Record saved for Patient ID: {data.get('Patient ID', 'N/A')}")
+    
+def get_all_records():
+    """Fetch and return all stored patient records."""
+    conn = sqlite3.connect(DB_NAME)
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM patient_data")
+    rows = cursor.fetchall()
+    conn.close()
+    return rows
+
+if __name__ == "__main__":
+    init_db()
+    test_data = {
+        "Patient ID": "2",
+        "Condition": "Broken Leg",
+        "Heart Rate": 92,
+        "Oxygen Level": 95,
+        "Status": "Stable",
+        "ETA": "6 minutes",
+        "Paramedic": "Tobias Gonzalez",
+        "Treatment": "Leg stabilised"
+    }
+    save_data(test_data)
+    records = get_all_records()
+    print("\n[Database] All records:")
+    for row in records:
+        print(row)
