@@ -1,7 +1,7 @@
 import paho.mqtt.client as mqtt
 import json
 
-BROKER = "localhost"
+BROKER = "test.mosquitto.org"
 TOPIC = "ambulance/patient"
 
 def on_connect(client, userdata, flags, rc):
