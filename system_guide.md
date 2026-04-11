@@ -115,7 +115,7 @@ This function should RETURN data like this:
 
 ---
 
-## 🟢 ambulance.py (Chidera Akujieze)
+## 🟢 ambulance.py and main.py (Chidera Akujieze)
 
 This file represents the ambulance.
 
@@ -298,7 +298,7 @@ We want a system where:
 
 Keep everything simple first.
 If something does not work, ask in the group chat.
-We will fix problems together.
+We will fix the problems together as a team.
 
 ---
 
