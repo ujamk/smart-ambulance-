@@ -7,17 +7,17 @@ def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def generate_patient_data():
-    # Possible medical conditions
-    conditions = [Broken Leg, Broken Arm, Chest Pain, Head Injury, Severe Burn]
+    # FIXED: Added quotes to make these strings
+    conditions = ["Broken Leg", "Broken Arm", "Chest Pain", "Head Injury", "Severe Burn"]
     condition = random.choice(conditions)
     heart_rate = random.randint(60, 140)
     oxygen_level = random.randint(88, 100)
 
-    # Set status based on vitals
+    # FIXED: Added quotes to status values
     if heart_rate > 120 or oxygen_level < 92:
-        status = Critical
+        status = "Critical"
     else:
-        status = Stable
+        status = "Stable"
 
     return condition, heart_rate, oxygen_level, status
 
@@ -28,24 +28,28 @@ def display_dashboard():
     try:
         while True:
             clear_screen()
-            print(SMART AMBULANCE PATIENT MONITOR)
-            print(-------------------------------)
-            print(fCondition:    {condition})
-            print(fHeart Rate:   {heart_rate} bpm)
-            print(fOxygen Level: {oxygen_level} %)
-            print(fStatus:       {status})
-            print(-------------------------------)
+            # FIXED: Added quotes and proper f-string formatting
+            print("SMART AMBULANCE PATIENT MONITOR")
+            print("-------------------------------")
+            print(f"Condition:    {condition}")
+            print(f"Heart Rate:   {heart_rate} bpm")
+            print(f"Oxygen Level: {oxygen_level} %")
+            print(f"Status:       {status}")
+            print("-------------------------------")
 
             # Countdown before updating data
             for i in range(10, 0, -1):
-                print(f\rNext update in {i} seconds..., end=)
+                # FIXED: Added quotes and set end to an empty string
+                print(f"\rNext update in {i} seconds...", end="")
                 time.sleep(1)
 
             # Update data for next cycle
             condition, heart_rate, oxygen_level, status = generate_patient_data()
 
     except KeyboardInterrupt:
-        print(\n\nMonitor stopped by user.)
+        # FIXED: Added quotes and proper newline character
+        print("\n\nMonitor stopped by user.")
 
-if __name__ == __main__:
+# FIXED: Added quotes around "__main__"
+if __name__ == "__main__":
     display_dashboard()
