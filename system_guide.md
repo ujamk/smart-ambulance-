@@ -44,7 +44,7 @@ Patient Monitor → Ambulance → MQTT → Hospital → Database
 
 This is where all the system code goes.
 
-Each person will work on ONE file here.
+Each person will work on ONE or TWO files here.
 
 ---
 
