@@ -1,17 +1,3 @@
-"""
-ambulance.py  –  Smart Ambulance System
-Developer   : Chidera Akujieze
-Component   : Ambulance System (MQTT Publisher)
-Repository  : smart-ambulance-
-Description : Connects to an MQTT broker and publishes patient health data
-              (condition, heart rate, oxygen level, ETA, paramedic, treatment)
-              to the topic  ambulance/patient  every 10 seconds.
-
-How to run it :
-  1. Install dependencies:   pip install paho-mqtt
-  2. Run this file:           python ambulance.py
-"""
-
 import paho.mqtt.client as mqtt
 import json
 import time
