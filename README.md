@@ -87,6 +87,11 @@ Treatment: Leg stabilised
 
 ### Hospital System (Receiving Data)
 
+HOSPITAL STAFF TYPES IN HIS/HER LOGGIN DETAILS
+
+Username: admin
+Password: hospital123
+
 PATIENT UPDATE RECEIVED
 
 Patient ID: 2
@@ -179,8 +184,8 @@ python src/ambulance.py
 ## 👥 Team Members and Roles
 
 - Mohamad Radwan → Patient Monitor (patient_monitor.py)
-- Chidera Akujieze → Ambulance System (ambulance.py)
-- Kosi Ujam → Hospital System + Login (hospital.py)
+- Chidera Akujieze → Ambulance System (ambulance.py + main.py)
+- Kosi Ujam → Hospital System + Login (hospital.py + hospital_login.py)
 - Mario Brunovsky → Database System (database.py)
 
 ---
@@ -210,4 +215,4 @@ python src/ambulance.py
 
 This project was developed following an agile approach, including task allocation, weekly progress tracking, and version control using GitHub.
 
-### Patient Monitor (UI)
+---
