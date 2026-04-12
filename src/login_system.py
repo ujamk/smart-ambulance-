@@ -1,4 +1,23 @@
-# Smart Ambulance Login System
+def login_user(username, password):
+    conn = sqlite3.connect(DB_NAME)
+    cursor = conn.cursor()
+
+    hashed_pw = hash_password(password)
+
+    cursor.execute(
+        "SELECT username, role FROM users WHERE username = ? AND password = ?",
+        (username, hashed_pw)
+    )
+
+    user = cursor.fetchone()
+    conn.close()
+
+    if user:
+        print(f"Login successful. Welcome {user[0]} ({user[1]}).")
+        return True
+    else:
+        print("Invalid username or password.")
+        return False# Smart Ambulance Login System
 
 import sqlite3
 import hashlib
