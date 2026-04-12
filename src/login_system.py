@@ -1,4 +1,42 @@
-def login_user(username, password):
+from getpass import getpass
+
+
+def menu():
+    create_database()
+
+    while True:
+        print("\n--- Smart Ambulance Login System ---")
+        print("1. Register user")
+        print("2. Login")
+        print("3. Exit")
+
+        choice = input("Choose an option: ").strip()
+
+        if choice == "1":
+            username = input("Enter new username: ").strip()
+            password = getpass("Enter new password: ").strip()
+            role = input("Enter role (e.g. admin/staff): ").strip()
+
+            if username and password and role:
+                register_user(username, password, role)
+            else:
+                print("All fields are required.")
+
+        elif choice == "2":
+            username = input("Enter username: ").strip()
+            password = getpass("Enter password: ").strip()
+
+            if username and password:
+                login_user(username, password)
+            else:
+                print("Username and password cannot be empty.")
+
+        elif choice == "3":
+            print("Exiting system.")
+            break
+
+        else:
+            print("Invalid option. Please try again.")def login_user(username, password):
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
 
