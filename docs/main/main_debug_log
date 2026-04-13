@@ -1,4 +1,4 @@
-# Smart Ambulance System – Debug Log
+## Smart Ambulance System – Debug Log
 **Project:** Smart Ambulance System  
 **Files reviewed:** `ambulance.py`, `database.py`, `hospital.py`, `hospital_login.py`, `patient_monitor.py`  
 **Log produced for:** `main.py` integration  
