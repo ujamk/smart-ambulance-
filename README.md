@@ -182,9 +182,11 @@ python main.py
 4. A manin menu will appear showing 3 options to choose, choose login and later on, type any of these usernames and passwords:
 
 
-Username: admin  Password: hospital123  Role: Admin
-Username: Tobias  Password: 123456  Role: paramedic
-Username: doctor  Password: pass2026  Role: doctor
+Username: admin  Password: hospital123  Role: Admin, 
+
+Username: Tobias  Password: 123456  Role: paramedic,
+
+Username: doctor  Password: pass2026  Role: doctor,
 
 
 5. Now, the system will start working as intended
