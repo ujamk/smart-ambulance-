@@ -169,14 +169,25 @@ test_mqtt.py
 pip install paho-mqtt
 
 
-2. Run the hospital system:
+2. Make sure all the files are inside one folder:
 
-python src/hospital.py
+ambulance.py, database.py, hospital.py, hospital_login.py, patient_monitor.py, main.py and
+smart_ambulance_system.py must all be in the same directory.
 
 
-3. Run the ambulance system:
+3. Run the main.py which will basically run the other parts of the system in the background:
+python main.py
 
-python src/ambulance.py
+
+4. A manin menu will appear showing 3 options to choose, choose login and later on, type any of these usernames and passwords:
+
+
+Username: admin  Password: hospital123  Role: Admin
+Username: Tobias  Password: 123456  Role: paramedic
+Username: doctor  Password: pass2026  Role: doctor
+
+
+5. Now, the system will start working as intended
 
 
 ---
