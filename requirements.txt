@@ -1,1 +1,15 @@
-paho-mqtt
+WHAT YOU NEED FOR THE SYSTEM TO WORK
+
+✔ Python 3.8 or newer
+Check your version by running: python --version or python3 --version Download from python.org if
+needed.
+✔ pip (Python package manager)
+pip comes bundled with Python 3.8+. Verify with: pip --version
+✔ paho-mqtt library
+The only external dependency. Install it 
+✔ Internet connection
+The system uses the free public broker test.mosquitto.org. No account or sign-up is needed just an
+active internet connection.
+✔ All 7 project files in one folder
+ambulance.py, database.py, hospital.py, hospital_login.py, patient_monitor.py, main.py and
+smart_ambulance_system.py must all be in the same directory.
